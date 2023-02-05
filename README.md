@@ -1,6 +1,6 @@
 # MetaHuman Mesh Tools
 
-![](/images/MetaHumanMeshToolsIcon512.jpg)
+![](/MetaHumanMeshToolsIcon512.jpg)
 
 ## Introduction
 
