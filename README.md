@@ -27,9 +27,9 @@ The body meshes only use regular skeletal deformation. This makes working with t
 
 ## Workflow overview
 
-This guide describes how a MetaHuman can be exported from Unreal, imported into Blender, modified, re-exported and re-imported into Unreal.
+This guide describes how a MetaHuman can be exported from Unreal, imported into Blender, modified, reexported and reimported into Unreal.
 
-Most of this process can be done using FBX, but supporting the morph targets of the face mesh through Blender makes the process a bit more cumbersome. Instead of exporting and importing the morph targets as part of the FBX file, this guide takes the approach of leaving them out completely. Instead, they are copied over from the original MetaHuman face mesh in Unreal after re-importing the FBX file. To make this work, this guide assumes the topology of the face mesh is not changed. This allows the vertex order to remain unchanged between the original face mesh asset and the changed version, which makes copying over the morph targets relatively easy.
+Most of this process can be done using FBX, but supporting the morph targets of the face mesh through Blender makes the process a bit more cumbersome. Instead of exporting and importing the morph targets as part of the FBX file, this guide takes the approach of leaving them out completely. Instead, they are copied over from the original MetaHuman face mesh in Unreal after reimporting the FBX file. To make this work, this guide assumes the topology of the face mesh is not changed. This allows the vertex order to remain exactly the same between the original face mesh asset and the changed version, which makes copying over the morph targets relatively easy and accurate.
 
 ## Exporting from Unreal
 
@@ -41,4 +41,17 @@ MetaHumans consist of separate meshes for the face, the body and clothing.
 
 You will need to export these as FBX files. When exporting, make sure to uncheck LOD levels and Morph Targets.
 
-For the face mesh, you will need an exact copy of the original FBX data used to import the MetaHuman. This is provided by the Unreal Plugin in this repository. When installed, right-click on the face mesh asset, and select 'Scripted Asset Actions / MetaHuman Mesh Tools / Face Raw Export'. This will result in a json file which can be imported to Blender using the provided Blender add-on.
+For the face mesh, you will need an exact copy of the original FBX data used to import the MetaHuman. This is provided by the Unreal Plugin in this repository. When installed, right-click on the face mesh asset, and select 'Scripted Asset Actions / MetaHuman Mesh Tools / Face Raw Export'. This will result in a raw json file which can be imported to Blender using the provided Blender add-on.
+
+## Importing into Blender
+
+Basic importing:
+
+- For both the face and the body, import from the FBX as normal.
+- Select the 'root' armature object and unparent it (alt-P), keeping the transform. Remove the old parent object. This should leave just the armature and a single child mesh. Note that the armature for the face and body are different and must both be kept.
+
+For the face geometry:
+
+- Remove the imported face mesh, but keep the armature.
+- Import the Unreal MetaHuman Mesh (.json) file.
+- Parent the new face mesh under the armature and add an armature modifier to it, pointing to its parent.
