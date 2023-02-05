@@ -1,0 +1,13 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.MetaHumanMeshTools.cpp.obj": [
+			"FaceMorphTargetCopy.gen.cpp.obj",
+			"FaceRawExport.gen.cpp.obj",
+			"MetahumanMeshTools.init.gen.cpp.obj",
+			"FaceMorphTargetCopy.cpp.obj",
+			"FaceRawExport.cpp.obj",
+			"MetaHumanMeshTools.cpp.obj"
+		]
+	}
+}

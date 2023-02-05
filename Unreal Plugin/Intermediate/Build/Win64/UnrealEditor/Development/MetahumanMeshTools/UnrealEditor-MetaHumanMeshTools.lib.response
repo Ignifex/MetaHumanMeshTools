@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-MetaHumanMeshTools.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"F:\Unreal Projects\MetahumanTools\Intermediate\Build\Win64\MetahumanToolsEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
+"F:\Unreal Projects\MetahumanTools\Plugins\MetaHumanMeshTools\Intermediate\Build\Win64\UnrealEditor\Development\MetaHumanMeshTools\Module.MetaHumanMeshTools.cpp.obj"
+"F:\Unreal Projects\MetahumanTools\Plugins\MetaHumanMeshTools\Intermediate\Build\Win64\UnrealEditor\Development\MetaHumanMeshTools\Default.rc2.res"
+/OUT:"F:\Unreal Projects\MetahumanTools\Plugins\MetaHumanMeshTools\Intermediate\Build\Win64\UnrealEditor\Development\MetaHumanMeshTools\UnrealEditor-MetaHumanMeshTools.lib"

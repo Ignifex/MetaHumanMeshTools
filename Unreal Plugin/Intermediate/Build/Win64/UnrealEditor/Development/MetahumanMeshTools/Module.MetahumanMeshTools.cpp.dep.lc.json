@@ -1,0 +1,38 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\intermediate\\build\\win64\\unrealeditor\\development\\metahumanmeshtools\\module.metahumanmeshtools.cpp",
+        "ProvidedModule": "",
+        "PCH": "f:\\unreal projects\\metahumantools\\intermediate\\build\\win64\\metahumantoolseditor\\development\\unrealed\\sharedpch.unrealed.shadowerrors.h.pch",
+        "Includes": [
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\intermediate\\build\\win64\\unrealeditor\\development\\metahumanmeshtools\\definitions.metahumanmeshtools.h",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\intermediate\\build\\win64\\unrealeditor\\inc\\metahumanmeshtools\\uht\\facemorphtargetcopy.gen.cpp",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\source\\metahumanmeshtools\\private\\facemorphtargetcopy.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\editor\\blueprinteditorlibrary\\public\\blueprinteditorlibrary.h",
+            "g:\\epic games\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\blueprinteditorlibrary\\uht\\blueprinteditorlibrary.generated.h",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\intermediate\\build\\win64\\unrealeditor\\inc\\metahumanmeshtools\\uht\\facemorphtargetcopy.generated.h",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\intermediate\\build\\win64\\unrealeditor\\inc\\metahumanmeshtools\\uht\\facerawexport.gen.cpp",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\source\\metahumanmeshtools\\private\\facerawexport.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\developer\\desktopplatform\\public\\idesktopplatform.h",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\intermediate\\build\\win64\\unrealeditor\\inc\\metahumanmeshtools\\uht\\facerawexport.generated.h",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\intermediate\\build\\win64\\unrealeditor\\inc\\metahumanmeshtools\\uht\\metahumanmeshtools.init.gen.cpp",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\source\\metahumanmeshtools\\private\\facemorphtargetcopy.cpp",
+            "g:\\epic games\\ue_5.1\\engine\\source\\runtime\\engine\\public\\rendering\\skeletalmeshmodel.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\runtime\\engine\\public\\rendering\\skeletalmeshlodmodel.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\runtime\\engine\\public\\rendering\\skeletalmeshlodimporterdata.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\math\\genericoctree.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\math\\genericoctreepublic.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\math\\genericoctree.inl",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\source\\metahumanmeshtools\\private\\facerawexport.cpp",
+            "g:\\epic games\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\engine\\skeletalmesheditordata.h",
+            "g:\\epic games\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\skeletalmesheditordata.generated.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\runtime\\core\\public\\misc\\filehelper.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\developer\\desktopplatform\\public\\desktopplatformmodule.h",
+            "g:\\epic games\\ue_5.1\\engine\\source\\editor\\unrealed\\public\\editordirectories.h",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\source\\metahumanmeshtools\\private\\metahumanmeshtools.cpp",
+            "f:\\unreal projects\\metahumantools\\plugins\\metahumanmeshtools\\source\\metahumanmeshtools\\public\\metahumanmeshtools.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
