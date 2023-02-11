@@ -64,6 +64,19 @@ For the face geometry:
 
 With this setup, you are already set to export. For your first try, it is recommended to skip modifying your MetaHuman and continue with exporting from Blender.
 
+### Modifying the mesh in Blender
+
+Here are some tips, dos and don'ts:
+- When working with the face mesh, you cannot change the facial bones. It is possible to scale the entire face, but this should only be applied to the armature of the body mesh, which also contains bones for the neck and head. By adjusting the scale of those bones, the head will be scaled with it in Unreal. Attempting to set a scale for the face mesh itself will cause issues with the visible bounding boxes of the groom assets.
+  - Since the facial bones cannot be adjusted, the eyes cannot be moved. The alignment of the mesh around the eyes with their bones is important for animation. However, they can be scaled relatively well within reasonable limits.
+  - Most other bones in the face are animated only by translation. This means they do not need to strictly match the position of their skinned vertices. You may be surprised by how much the mesh can be changed and moved without breaking the facial animation.
+- The topology of the facial mesh may not be changed to ensure the morph targets can be safely copied over later. This means you cannot merge any vertices, change the triangulation or add new parts.
+  - Since there is no way to set up a Mirror modifier, Sculpt tools are a quick alternative for making symmetric changes. Sculpting does have a tendency to mess up the 'Custom Split Normals'. It can help to create a copy of your mesh to preserve the original custom normals. You can copy these over to your modified version with a Data Transfer modifier.
+- The bones of the body mesh can be adjusted as needed. When changing either the body mesh itself or its bones, note that the helper bones set up around the core skeleton are animated to follow its pose. This animation is adjusted to work with the current body shape and may create unnatural looking deformations when the mesh or skeleton is adjusted.
+  - As mentioned before, the body mesh and its skeleton use a regular skeletal mesh setup. All of the standard practices apply.
+- To avoid visible seams between the face and the body mesh, you will need to ensure they have matching vertex positions, normals and skinning weights. It may help to set up modifiers to transfer some of these to your meshes.
+  - For the normals, it is recommended to create a copy of the face and body mesh where the two are merged together. This can be used as a source for a Data Transfer modifier to copy over normals. Take care not to override all the normals of the face mesh.
+
 ### Exporting from Blender
 
 To export, simply export to FBX as normal. There are a few important points to check:
