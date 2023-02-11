@@ -37,7 +37,7 @@ This guide describes how a MetaHuman can be exported from Unreal, imported into 
 
 Most of this process can be done using FBX, but supporting the morph targets of the face mesh through Blender makes the process a bit more cumbersome. Instead of exporting and importing the morph targets as part of the FBX file, this guide takes the approach of leaving them out completely. Instead, they are copied over from the original MetaHuman face mesh in Unreal after reimporting the FBX file. To make this work, this guide assumes the topology of the face mesh is not changed. This allows the vertex order to remain exactly the same between the original face mesh asset and the changed version, which makes copying over the morph targets relatively easy and accurate.
 
-## Exporting from Unreal
+### Exporting from Unreal
 
 For both exporting from Unreal and reimporting back into Unreal, this guide only considers the base Level of Detail. Methods to recreate LOD levels for the modified mesh are left as an exercise to the reader.
 
@@ -49,7 +49,7 @@ You will need to export these as FBX files. When exporting, make sure to uncheck
 
 For the face mesh, you will need an exact copy of the original FBX data used to import the MetaHuman. This is provided by the Unreal Plugin in this repository. When installed, right-click on the face mesh asset and select 'Scripted Asset Actions / MetaHuman Mesh Tools / Face Raw Export'. This will result in a raw json file which can be imported to Blender using the provided Blender add-on.
 
-## Importing into Blender
+### Importing into Blender
 
 Basic importing:
 
@@ -64,7 +64,7 @@ For the face geometry:
 
 With this setup, you are already set to export. For your first try, it is recommended to skip modifying your MetaHuman and continue with exporting from Blender.
 
-## Exporting from Blender
+### Exporting from Blender
 
 To export, simply export to FBX as normal. There are a few important points to check:
 - The face and body are exported separately.
@@ -72,7 +72,7 @@ To export, simply export to FBX as normal. There are a few important points to c
 - The armature object should not have a parent and must be named 'root'. If you have both a face and body armature in the same scene, these cannot have the same name, so you will always need to check and adjust the name before exporting.
 - The mesh should have an armature modifier, pointing to its parent, as the last modifier on the stack. Any modifiers before this will be applied automatically on export.
 
-## Importing into Unreal
+### Importing into Unreal
 
 Importing into Unreal is done by creating a copy of the original MetaHuman mesh and overriding the mesh geometry with the given FBX. You will also be creating a copy of the blueprint for the entire MetaHuman.
 - First, copy either the face or body mesh to your own asset. It is recommended to place these copies outside of the default MetaHumans folder, since the contents of that folder are managed by the Quixel Bridge plugin.
