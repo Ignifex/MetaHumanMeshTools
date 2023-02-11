@@ -84,15 +84,18 @@ Importing into Unreal is done by creating a copy of the original MetaHuman mesh 
   - This step should not prompt any material assignment issues. If anything should go wrong, check the exported material names against the 'Slot Names' under Material Slots. It is likely faster to recreate your mesh copy asset instead of attempting to fix the material assignments by hand.
   - The new MetaHuman mesh should have the same number of Verts as the original, but the bone influences may vary a bit.
   - The newly imported mesh does not yet have morph targets applied, but the display of these in the asset viewer is not immediately updated. Reopening the window shows they are now missing.
+  
 For body meshes, you are already done. For face meshes, the morph targets still need to be transferred from the original MetaHuman mesh.
 - Right click on your new face mesh asset and select 'Scripted Asset Actions / MetaHuman Mesh Tools / Face Morph Target Copy'. A dialog window will open.
 - Set the original MetaHuman face mesh as the Source Mesh and click OK.
 - The face should now be fully ready and should animate like the original.
   - The copying of the morph targets may fail if the number of vertices in the mesh assets changed. This may happen due to minor differences in vertex position, which can cause different merges of overlapping vertices. If this should fail, a warning is printed to the Output Log.
   - A quick check whether the morph targets work is by closing the MetaHuman's eyes. The line where the eyelid is folded back when the eye is opened should dissappear when it closes.
+  
 Next, you will need to create your own copy of the MetaHuman blueprint to assign your meshes to it.
 - Copy the blueprint from 'MetaHumans / \<YourMetaHuman\> / BP_\<YourMetaHuman\>' to your own asset. Again, it is recommended to place this copy outside of the default MetaHumans folder.
 - Open the blueprint and find the Body or Face listed in the Components. Simply assign your mesh as their 'Skeletal Mesh Asset', save and compile.
+
 Grooms, the assets for hair, bind to the face geometry. If you change the face, you will need to create a copy of the groom's Binding Asset.
 - Navigate to each of your used groom components, and click the Browse button below the Binding Asset to select the asset file. Create another copy outside the MetaHumans folder.
 - Open your new Binding Asset, assign the original MetaHuman face mesh as the 'Source Skeletal Mesh' and assign your own face mesh as the 'Target Skeletal Mesh'
